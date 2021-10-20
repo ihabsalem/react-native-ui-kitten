@@ -6,7 +6,7 @@ import Data from '../models/store-home';
 import {List, Text} from '@ui-kitten/components';
 import {StyleSheet} from 'react-native';
 import {OverlayCard} from '../shared/OverlayCard';
-import {HorizentalCardList} from '../shared/HorizentalCardList/HorizentalCardList';
+import {HorizentalCardList} from '../shared/HorizentalCardList';
 import {SafeAreaView, ScrollView, StatusBar} from 'react-native';
 export default class HomePageScreen extends Component {
   constructor(props: Component) {
@@ -46,13 +46,14 @@ export default class HomePageScreen extends Component {
       this.setState({isLoading: false, data: []});
     }
   }
-  renderHeader(): any {
+  renderHeader(text: string): any {
     return (
       <Text style={styles.headerTitle} appearance="hint">
-        Hot Offers
+       {text}
       </Text>
     );
   }
+  
   render() {
     const {
       bannerLogos = [],

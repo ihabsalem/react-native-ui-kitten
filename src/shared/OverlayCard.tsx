@@ -1,6 +1,6 @@
 import {Button, Card, CardElement, Text} from '@ui-kitten/components';
 import React from 'react';
-import {StyleSheet} from 'react-native';
+import {Alert, StyleSheet} from 'react-native';
 import {ImageOverlay} from './image-overlay.component';
 
 export const OverlayCard = (props: any): CardElement => {
@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
     width: 60,
     backgroundColor: '#edf0f9',
     color: '#000',
-    textAlign: 'center'
+    textAlign: 'center',
   },
   title: {
     zIndex: 1,
